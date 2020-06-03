@@ -56,7 +56,7 @@ module Pronto
       end
 
       def autocorrect_team
-        @autocorrect_team ||= ::RuboCop::Cop::Team.new(
+        @autocorrect_team ||= ::RuboCop::Cop::Team.mobilize(
           ::RuboCop::Cop::Registry.new([cop]),
           patch_cop.rubocop_config,
           auto_correct: true,

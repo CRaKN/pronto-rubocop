@@ -14,7 +14,7 @@ describe Pronto::Rubocop::PatchCop do
 
   before do
     allow(RuboCop::ProcessedSource).to receive(:from_file) { processed_source }
-    allow(RuboCop::Cop::Team).to receive(:new) { team }
+    allow(RuboCop::Cop::Team).to receive(:mobilize) { team }
     allow(Pronto::Rubocop::OffenseLine).to receive(:new) { offense_line }
   end
 
